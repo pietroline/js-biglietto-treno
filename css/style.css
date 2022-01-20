@@ -1,0 +1,12 @@
+.ms_messaggio_ricevuto{
+    background-color: lightskyblue;
+}
+
+.ms_messaggio_inviato{
+    background-color: lightgray;
+}
+
+#prezzoBigliettoScontato{
+    color: red;
+    font-weight: bold;
+}

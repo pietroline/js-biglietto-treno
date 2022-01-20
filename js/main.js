@@ -18,6 +18,8 @@ let km = prompt("Quanti km di viaggio?");
         }
     // 
 
+    document.getElementById("km").innerHTML= km + " km";
+
 
 
 
@@ -54,6 +56,8 @@ if (isNaN(flag)){
             }
 
         // 
+
+        document.getElementById("eta").innerHTML = eta + " anni";
 }
 
 
@@ -72,23 +76,24 @@ if (isNaN(flag)){
     let prezzoBiglietto = km * PREZZO;
     prezzoBiglietto = prezzoBiglietto.toFixed(2);
     let prezzoFinale = `Il prezzo del biglietto per percorrere ${km} km è di ${prezzoBiglietto} €.`;
+    document.getElementById("prezzoBiglietto").innerHTML = prezzoFinale;
     console.log(`Calcolato prezzo biglietto, costo di ${prezzoBiglietto} €`);
     
     // Sconto?
     if(eta < 18){
         prezzoBiglietto = prezzoBiglietto - ((prezzoBiglietto) * 20) / 100;
         prezzoBiglietto = prezzoBiglietto.toFixed(2);
-        prezzoFinale = prezzoFinale + ` Solo per oggi, poichè sei minorenne applichiamo uno sconto del 20%. Quindi per te il prezzo scontato per percorrere ${km} km è di ` +  prezzoBiglietto + " €.";
+        prezzoFinale = ` Solo per oggi, poichè sei minorenne applichiamo uno sconto del 20%. Quindi per te il prezzo scontato per percorrere ${km} km è di ` +  prezzoBiglietto + " €.";
+        document.getElementById("prezzoBigliettoScontato").innerHTML = prezzoFinale;
         console.log(`Il passeggero è minorenne, applico sconto 20%, totale scontato: ${prezzoBiglietto}`);
     
     } else if(eta > 65){
         prezzoBiglietto = prezzoBiglietto - ((prezzoBiglietto) * 40) / 100;
         prezzoBiglietto = prezzoBiglietto.toFixed(2);
-        prezzoFinale = prezzoFinale + ` Solo per oggi, poichè hai un età maggiore di 65 anni applichiamo uno sconto del 40%. Quindi per te il prezzo scontato per percorrere ${km} km è di ` +  prezzoBiglietto + " €.";
+        prezzoFinale = ` Solo per oggi, poichè hai un età maggiore di 65 anni applichiamo uno sconto del 40%.Quindi per te il prezzo scontato per percorrere ${km} km è di ` +  prezzoBiglietto + " €.";
+        document.getElementById("prezzoBigliettoScontato").innerHTML = prezzoFinale;
         console.log(`Il passeggero ha più di 65 anni, applico sconto 40%, totale scontato: ${prezzoBiglietto}`);
     }
-
-    document.getElementById("prezzoBiglietto").innerHTML = prezzoFinale;
   
 }
 

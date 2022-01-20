@@ -6,10 +6,59 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Biglietteria</title>
 
+    <!-- link css bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <!-- link style.css -->
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-    <div id="prezzoBiglietto"></div>
+    <header class="text-center my-4">
+        <h1>Biglietteria treni veloci</h1>
+        <p>
+            <span>Stai messagiando con l'operatore del servizio di biglietteria</span> 
+            <a href="#">treni veloci</a>
+        </p>
+    </header>
+
+    <main class="container-md py-4">
+        <ul class="list-unstyled">
+            <li class="text-start m-5">
+                <span class="p-4 ms_messaggio_ricevuto">Ciao, come posso esserti utile?</span>
+            </li>
+            <li class="text-end m-5">
+                <span class="p-4 ms_messaggio_inviato">Ciao, vorrei acquistare un biglietto</span>
+            </li>
+            <li class="text-start m-5">
+                <span class="p-4 ms_messaggio_ricevuto">Quanti km devi percorrere?</span>
+            </li>
+            <li class="text-end m-5">
+                <span id="km" class="p-4 ms_messaggio_inviato"></span>
+            </li>
+            <li class="text-start m-5">
+                <span class="p-4 ms_messaggio_ricevuto">Quanti anni hai?</span>
+            </li>
+            <li class="text-end m-5">
+                <span id="eta" class="p-4 ms_messaggio_inviato"></span>
+            </li>
+            <li class="text-start m-5">
+                <span class="p-4 ms_messaggio_ricevuto">Ho calcolato per te il costo del biglietto</span>
+            </li>
+            <li class="text-start m-5">
+                <span class="p-4 ms_messaggio_ricevuto d-inline-block w-75">
+                    <div id="prezzoBiglietto"></div>
+                    <div id="prezzoBigliettoScontato"></div>
+                    <div>Buona serata</div>
+                </span>
+                
+            </li>
+            <li class="text-end m-5">
+                <span class="p-4 ms_messaggio_inviato">Ti ringrazio, buona serata anche a te!</span>
+            </li>
+        </ul>
+ 
+    </main>
     
     <script type="text/javascript" src="js/main.js"></script>
 </body>
